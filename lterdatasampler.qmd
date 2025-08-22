@@ -8,6 +8,7 @@ execute:
 ```{r}
 library(tidyverse)
 library(lterdatasampler)
+library(kableExtra)
 ```
 
 ```{r, fig.cap= "this is my caption"}
@@ -22,5 +23,13 @@ crab_sum <- pie_crab %>%
   summarise(mean_size = round(mean(size), 2),
             sd_size = round(sd(size), 2),
             sample_size = n())
+```
+
+```{r}
+#| echo: false
+crab_sum %>%
+  kable(col.names = c("Site", "Mean Size", "Size Standard Devietion", "Sample Size")) %>%
+  kable_classic() %>%
+  scroll_box(height = "200px", width = "700px")
 ```
 
