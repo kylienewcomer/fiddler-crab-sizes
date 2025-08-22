@@ -6,6 +6,7 @@ execute:
 ---
 
 ```{r}
+#| include: false
 library(tidyverse)
 library(lterdatasampler)
 library(kableExtra)
