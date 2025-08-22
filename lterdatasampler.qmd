@@ -8,3 +8,10 @@ library(tidyverse)
 library(lterdatasampler)
 ```
 
+```{r}
+pie_crab <- pie_crab
+
+ggplot(data = pie_crab, aes(x= latitude, y= size)) +
+  geom_jitter()
+```
+
