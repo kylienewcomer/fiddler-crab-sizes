@@ -1,6 +1,8 @@
 ---
 title: "lterdatasampler"
 format: html
+execute: 
+  echo: false
 ---
 
 ```{r}
@@ -8,10 +10,17 @@ library(tidyverse)
 library(lterdatasampler)
 ```
 
-```{r}
+```{r, fig.cap= "this is my caption"}
 pie_crab <- pie_crab
 
 ggplot(data = pie_crab, aes(x= latitude, y= size)) +
   geom_jitter()
+```
+```{r}
+crab_sum <- pie_crab %>% 
+  group_by(site) %>% 
+  summarise(mean_size = round(mean(size), 2),
+            sd_size = round(sd(size), 2),
+            sample_size = n())
 ```
 
