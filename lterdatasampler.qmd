@@ -3,3 +3,8 @@ title: "lterdatasampler"
 format: html
 ---
 
+```{r}
+library(tidyverse)
+library(lterdatasampler)
+```
+
